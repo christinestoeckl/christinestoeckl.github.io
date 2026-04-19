@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<style> :root { --bg: #f5f0e8; --surface: #fffdfa; --surface-soft: #efe6d8; --text: #4d4138; --muted: #7d6c61; --accent: #9a7a5e; --accent-dark: #7b5d45; --line: #d9cab7; --shadow: 0 16px 40px rgba(77, 65, 56, 0.10); --radius: 20px; --max: 1120px; } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--text); background: radial-gradient(circle at top left, rgba(239, 230, 216, 0.85), transparent 30%), linear-gradient(180deg, #f8f4ee 0%, var(--bg) 100%); line-height: 1.65; } a { color: inherit; } .site-header { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); background: rgba(248, 244, 238, 0.88); border-bottom: 1px solid rgba(217, 202, 183, 0.9); } .nav-wrap, .container { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; } .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.9rem 0; } .brand { font-size: 1rem; letter-spacing: 0.02em; color: var(--accent-dark); text-decoration: none; white-space: nowrap; } .nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.45rem; } .nav a { text-decoration: none; padding: 0.55rem 0.85rem; border-radius: 999px; color: var(--accent-dark); transition: background-color 0.2s ease, transform 0.2s ease; } .nav a:hover, .nav a:focus-visible { background: var(--surface-soft); transform: translateY(-1px); outline: none; } main { padding: 2rem 0 4rem; } .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 2rem; align-items: center; background: linear-gradient(180deg, rgba(255,253,250,0.95), rgba(255,250,244,0.9)); border: 1px solid var(--line); border-radius: calc(var(--radius) + 8px); box-shadow: var(--shadow); overflow: hidden; min-height: 420px; } .hero-copy { padding: 3rem; } .eyebrow { display: inline-block; margin-bottom: 1rem; padding: 0.4rem 0.8rem; border-radius: 999px; background: var(--surface-soft); color: var(--accent-dark); font-size: 0.95rem; } h1, h2, h3 { font-weight: normal; line-height: 1.2; margin: 0 0 1rem; } h1 { font-size: clamp(2rem, 4vw, 3.8rem); color: var(--accent-dark); } .hero-copy p, .hero-copy .stack { font-size: 1.08rem; margin: 0 0 1rem; } .stack div { margin-bottom: 0.25rem; } .contact-inline { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); } .hero-media { min-height: 100%; background: linear-gradient(180deg, rgba(154,122,94,0.10), rgba(154,122,94,0.18)); display: flex; align-items: stretch; } .hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 420px; } .section { margin-top: 1.5rem; padding: 2rem; background: rgba(255, 253, 250, 0.85); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(77, 65, 56, 0.05); scroll-margin-top: 6rem; } .section h2 { margin-bottom: 1.2rem; font-size: clamp(1.5rem, 2.3vw, 2.2rem); color: var(--accent-dark); } .section p { margin: 0 0 1rem; } .focus-list { list-style: disc; padding-left: 1.4rem; margin: 0.6rem 0 0; display: block; } .focus-list li { margin: 0 0 0.42rem 0; padding: 0; border: 0; background: transparent; border-radius: 0; } .info-grid, .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; } .card { padding: 1.25rem; background: rgba(245, 240, 232, 0.55); border: 1px solid rgba(217, 202, 183, 0.8); border-radius: 16px; } .card h3 { margin-bottom: 0.75rem; color: var(--accent-dark); font-size: 1.15rem; } .timeline { display: grid; gap: 0.75rem; } .timeline-item { padding: 1rem 1.1rem; border-radius: 16px; background: rgba(245, 240, 232, 0.55); border: 1px solid rgba(217, 202, 183, 0.8); } .contact-block { font-size: 1.04rem; } .footer { width: min(calc(100% - 2rem), var(--max)); margin: 1.5rem auto 0; padding: 1.5rem 0 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; } @media (max-width: 900px) { .hero, .info-grid, .contact-grid, .focus-list { grid-template-columns: 1fr; } .hero-copy { padding: 2rem; } .hero-media { order: -1; } .hero-media img { min-height: 320px; max-height: 420px; } } @media (max-width: 640px) { .nav-wrap { flex-direction: column; align-items: stretch; } .brand { text-align: center; } .nav { justify-content: center; } main { padding-top: 1rem; } .section { padding: 1.4rem; } .hero-copy { padding: 1.5rem; } .contact-inline { flex-direction: column; gap: 0.4rem; } } /* --- Compact layout improvements --- */
+section { padding: 40px 20px !important; max-width: 900px; margin: 0 auto;
+} p { margin-bottom: 0.6em; line-height: 1.5;
+} h2 { margin-bottom: 0.6em;
+} .therapie p { margin-bottom: 0.4em; line-height: 1.45;
+} .werdegang p { margin-bottom: 0.3em; line-height: 1.4;
+} /* tighter spacing for lists if any */
+ul, li { margin: 0.3em 0;
+} /* reduce whitespace on mobile */
+@media (max-width: 600px) { section { padding: 25px 15px !important; }
+} #schwerpunkte p { margin-bottom: 0.35rem; } /* Therapy section: visually denser */
+#therapie p { margin-bottom: 0.55rem; line-height: 1.48; max-width: 78ch;
+} /* Small screen tightening */
+@media (max-width: 700px) { .info-stack p { padding: 0.65rem 0.8rem; }
+} /* Allgemeine Informationen: visibly compact stacked layout */
+.general-list { display: flex; flex-direction: column; gap: 0.5rem; max-width: 760px; margin-top: 0.4rem;
+} .general-item { padding: 0.8rem 0.95rem; background: rgba(255,255,255,0.72); border: 1px solid rgba(120, 92, 71, 0.16); border-radius: 10px;
+} .general-item p { margin: 0; line-height: 1.42;
+} /* unified address + map box */ .address-box { display: block; padding: 1rem; background: #f6f1ec; /* warmer, solid background */ border: 1px solid rgba(120,92,71,0.18); border-radius: 12px;
+} .address-box p { margin: 0 0 0.8rem 0; line-height: 1.5;
+} .address-box iframe { display: block; width: 100%; border: 0; border-radius: 10px;
+} img { max-width: 420px;
+} .contact-block > p:first-child { margin-bottom: 0.45rem;
+} .contact-block > p:first-child strong { font-weight: 700;
+} .general-stack { display: flex; flex-direction: column; gap: 0.5rem; max-width: 760px;
+} .general-box { width: 100%;
+} /* force Allgemeine Informationen into 4 separate vertical boxes */
+#allgemeines .general-stack { display: flex !important; flex-direction: column !important; gap: 0.75rem !important; max-width: 760px;
+} #allgemeines .general-box { width: 100% !important; display: block !important;
+} #allgemeines .general-box h3 { margin-top: 0;
+} /* slightly smaller hero image */
+img { max-width: 360px;
+} /* Force smaller front-page image */
+#startseite img,
+header img,
+.hero img,
+.hero-image img { width: 280px !important; max-width: 70vw !important; height: auto !important; display: block !important; margin: 0 auto 1rem !important;
+} /* remove frame around front-page image */
+#startseite img,
+header img,
+.hero img,
+.hero-image img { border: 0 !important; border-radius: 0 !important; box-shadow: none !important; background: transparent !important;
+} /* Schwerpunkte box and modern bullets */
+.focus-box { max-width: 760px;
+} .focus-box > p { margin-bottom: 0.7rem;
+} .modern-bullets { list-style: none; padding-left: 0; margin: 0.2rem 0 0;
+} .modern-bullets li { position: relative; padding-left: 1.35rem; margin: 0 0 0.45rem 0; line-height: 1.45;
+} .modern-bullets li::before { content: "◆"; position: absolute; left: 0; top: 0.02rem; color: #d8c8bb; font-size: 0.78rem;
+} /* contact labels same feel as Sitzungsdauer */
+#kontakt p strong { font-weight: 700;
+} /* HARD REMOVE image frame (including parent containers) */
+#startseite img,
+header img,
+.hero img,
+.hero-image img,
+img { border: none !important; outline: none !important; box-shadow: none !important; background: transparent !important;
+} /* also remove possible parent frame */
+#startseite img,
+#startseite img * { box-shadow: none !important;
+} /* unify label style (Terminvereinbarung & Praxisadresse = Sitzungsdauer style) */
+#kontakt strong { font-size: 1rem; font-weight: 600; color: #6f5a4a; /* warm brown tone used elsewhere */ font-family: inherit; letter-spacing: 0.01em;
+} /* remove the actual framed panel behind the hero image */
+.hero-media { background: transparent !important; border: 0 !important; box-shadow: none !important; display: flex !important; align-items: center !important; justify-content: center !important; padding: 0 !important;
+} .hero-media::before,
+.hero-media::after { display: none !important; content: none !important;
+} .hero-media img { min-height: 0 !important; width: 280px !important; max-width: 70vw !important; height: auto !important; object-fit: contain !important; border: 0 !important; outline: 0 !important; box-shadow: none !important; border-radius: 0 !important; background: transparent !important;
+} /* Therapie: box in box */
+.therapy-box { max-width: 760px;
+} 
+
+/* CV layout (fake table) */
+.cv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cv-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.8rem;
+}
+
+.cv-year {
+  font-weight: 600;
+  color: #6f5a4a;
+}
+
+.cv-desc {
+  line-height: 1.4;
+}
+
+
+/* center year column */
+.cv-year {
+  text-align: center;
+}
+
+
+/* Mobile: stack CV layout for better readability */
+@media (max-width: 600px) {
+  .cv-item {
+    grid-template-columns: 1fr !important;
+    gap: 0.2rem !important;
+  }
+
+  .cv-year {
+    text-align: left !important;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+
+  .cv-desc {
+    padding-left: 0;
+  }
+}
+
+
+/* ===== Global mobile optimization ===== */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 26px 16px !important;
+  }
+
+  h1 {
+    font-size: 1.9rem !important;
+    line-height: 1.15 !important;
+  }
+
+  h2 {
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.7rem !important;
+  }
+
+  h3 {
+    font-size: 1.02rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  p,
+  li,
+  .cv-desc {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .card,
+  .focus-box,
+  .address-box,
+  .general-box,
+  .contact-block {
+    padding: 0.95rem !important;
+    border-radius: 12px !important;
+  }
+
+  .modern-bullets li,
+  .focus-list li {
+    padding-left: 1.25rem !important;
+    margin-bottom: 0.42rem !important;
+  }
+
+  .modern-bullets li::before {
+    left: 0 !important;
+  }
+
+  .contact-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.8rem !important;
+  }
+
+  .address-box iframe,
+  .map-wrap iframe {
+    height: 220px !important;
+  }
+
+  .cv-list {
+    gap: 0.7rem !important;
+  }
+
+  .cv-item {
+    grid-template-columns: 1fr !important;
+    gap: 0.15rem !important;
+  }
+
+  .cv-year {
+    text-align: left !important;
+    font-size: 0.96rem !important;
+    margin-bottom: 0.05rem !important;
+  }
+
+  header,
+  .topbar,
+  .site-header {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  img,
+  #startseite img,
+  .hero img,
+  .hero-image img,
+  .hero-media img {
+    width: min(280px, 78vw) !important;
+    max-width: 78vw !important;
+    height: auto !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  section {
+    padding: 22px 14px !important;
+  }
+
+  h1 {
+    font-size: 1.72rem !important;
+  }
+
+  h2 {
+    font-size: 1.25rem !important;
+  }
+
+  p,
+  li,
+  .cv-desc {
+    font-size: 0.96rem !important;
+  }
+
+  .card,
+  .focus-box,
+  .address-box,
+  .general-box,
+  .contact-block {
+    padding: 0.85rem !important;
+  }
+
+  .address-box iframe,
+  .map-wrap iframe {
+    height: 200px !important;
+  }
+
+  .cv-year {
+    font-size: 0.94rem !important;
+  }
+}
+
+/* force hide top badge if still present */
+.badge, .name-badge, .hero-badge {
+  display: none !important;
+}
+
+
+@media (max-width: 600px) {
+  footer, .footer, p {
+    text-align: center;
+  }
+}
+
+
+/* subtle rounded corners for hero image */
+#startseite img,
+.hero img,
+.hero-image img,
+.hero-media img {
+  border-radius: 6px;
+}
+
+
+/* force subtle rounding (override everything) */
+#startseite img,
+.hero img,
+.hero-image img,
+.hero-media img {
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+</style>
+<title>Dr. Christine Stöckl – Psychotherapie in Salzburg</title><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Dr. Christine Stöckl – Psychotherapie, Psychoanalyse und klinisch-psychologische Begleitung in Salzburg. Praxis in der Bergstraße 22, 5020 Salzburg. Terminvereinbarung telefonisch." name="description"/><meta content="index,follow,max-image-preview:large" name="robots"/><meta content="Psychotherapie Salzburg, Psychoanalyse Salzburg, Psychotherapeutin Salzburg, klinische Psychologin Salzburg, Dr. Christine Stöckl" name="keywords"/><meta content="Dr. Christine Stöckl" name="author"/><meta content="#f6f1ec" name="theme-color"/><link href="https://www.psychotherapie-stoeckl.at/" rel="canonical"/><meta content="Dr. Christine Stöckl – Psychotherapie in Salzburg" property="og:title"/><meta content="Psychotherapie, Psychoanalyse und klinisch-psychologische Begleitung in Salzburg." property="og:description"/><meta content="website" property="og:type"/><meta content="https://www.psychotherapie-stoeckl.at/" property="og:url"/><meta content="de_AT" property="og:locale"/><meta content="https://christinestoeckl.github.io/stoeckl.png" property="og:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Psychologist", "name": "Dr. Christine Stöckl", "url": "https://www.psychotherapie-stoeckl.at/", "telephone": "+43 676 42 042 32", "address": {"@type": "PostalAddress", "streetAddress": "Bergstraße 22", "postalCode": "5020", "addressLocality": "Salzburg", "addressCountry": "AT"}, "areaServed": "Salzburg"}</script><script id="ga-setup">(function(){var GA_MEASUREMENT_ID='G-XXXXXXXXXX';if(!GA_MEASUREMENT_ID||GA_MEASUREMENT_ID==='G-XXXXXXXXXX')return;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_MEASUREMENT_ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js', new Date());gtag('config', GA_MEASUREMENT_ID);})();</script></head>
+<body>
+<header class="site-header">
+<div class="nav-wrap">
+Dr. Christine Stöckl - Psychotherapie
+
+</div>
+</header>
+<main id="top">
+<div class="container">
+<section class="hero" id="home">
+<div class="hero-copy">
+<h1>Dr.<br/>Christine Stöckl</h1>
+<div class="stack">
+<div>Klinische- und Gesundheitspychologin</div>
+<div>Psychotherapeutin</div>
+<div>Psychoanalytikerin</div>
+</div>
+<div class="contact-inline">
+<div>Bergstraße 22<br/>5020 Salzburg</div>
+<div>Tel.: 0043 (0)676 42 042 32</div>
+</div>
+</div>
+<div class="hero-media">
+<img alt="Dr. Christine Stöckl" src="https://christinestoeckl.github.io/stoeckl.png" style="width: 280px; max-width: 70vw; height: auto; display: block; margin: 0 auto 1rem;"/>
+</div>
+</section>
+<section class="section" id="schwerpunkte">
+<h2>Schwerpunkte meiner Arbeit:</h2>
+<div class="card focus-box"><h3>Psychoanalytische Psychotherapie und Psychoanalyse:</h3><ul class="focus-list modern-bullets"><li>Depressionen, innere Leere, Burn-out, Gefühl der Erschöpfung und Überforderung</li><li>Trauer und Verlustreaktionen nach Trennung, Scheidung, Tod von Angehörigen und Freunden</li><li>Ängste, Panikattacken, Phobien (Angst vor Prüfungen, Flugangst, Tierphobien, Angst vor geschlossenen Räumen oder öffentlichem Auftreten)</li><li>Zwänge (Gedankenzwang, zwanghaftes Ausführen von Handlungsabläufen und Ritualen)</li><li>Traumatische Erfahrungen (Missbrauchserlebnisse, lebensbedrohliche Situationen z.B. nach Unfällen, schwere Erkrankungen)</li><li>Psychosomatische Krankheiten (Migräne, Rücken- Gelenksschmerzen, Magen-Darmbeschwerden, Hautprobleme, Krebserkrankungen)</li><li>Ess-Störungen</li><li>Beziehungs- und Partnerschaftskonflikte</li><li>Sexuelle Störungen</li><li>Probleme im Beruf (Mobbing, Arbeitsverlust, Pensionsschock)</li><li>Lebens- und Sinnkrisen, Alterskrisen</li><li>Selbsterfahrung, Persönlichkeitsentfaltung</li><li>Supervision von Einzelpersonen und Gruppen</li><li>Coaching bei Konflikten am Arbeitsplatz und in Institutionen</li></ul></div></section>
+<section class="section" id="therapie">
+<h2>Therapie</h2>
+<div class="card therapy-box"><p>Die von mir angewandte Therapiemethode basiert auf den Erkenntnissen der Psychoanalyse und wird bei psychischen und psychosomatischen Störungen, die vielerlei Ursachen und Erscheinungsbilder haben, angewendet.</p><p>Ausgehend von den aktuellen Symptomen wird versucht, einen Zusammenhang zwischen den jetzigen Störungen und ihren unbewussten, verborgenen Ursachen zu erkennen.</p><p>Das bessere Verstehen der eigenen Persönlichkeit und der eigenen Entwicklung sowie die neuen Erfahrungen im psychotherapeutischen Prozess schaffen die Möglichkeit für Veränderung.</p><p>Es entstehen ein Gefühl von mehr Selbstbestimmtheit und Selbstwert sowie das Vertrauen in die eigene Kompetenz, das tägliche Leben, Beziehungen und Arbeit befriedigender zu gestalten.</p></div></section>
+<section class="section" id="allgemeines"><h2>Allgemeine Informationen:</h2><div class="general-stack"><div class="card general-box">
+<h3>Erstgespräche:</h3>
+<p>In den Erstgesprächen bekomme ich einen Eindruck von der Problematik und gewinne wichtige diagnostische Einschätzungen, um so in Absprache mit den Hilfesuchenden die geeignete Therapieform (Einzel-/Paartherapie, Kurz-/Langzeittherapie, Stundenfrequenz) planen zu können.</p>
+<p>Für die Patienten sind die Erstgespräche ebenso wichtig, denn sie bieten die Möglichkeit nachzuspüren, ob sie mit mir über ihr Anliegen offen sprechen können und ob die von mir angebotene Therapiemethode auch ihren Vorstellungen und Bedürfnissen entspricht.</p>
+</div><div class="card general-box">
+<h3>Sitzungsdauer:</h3>
+<p>Eine Sitzung dauert in der Regel 50 Minuten.</p>
+</div><div class="card general-box">
+<h3>Honorar:</h3>
+<p>Das Honorar der psychotherapeutischen Behandlung oder Beratung richtet sich nach den Richtlinien der Berufverbandes Österreichischer PsychologInnen.</p>
+</div><div class="card general-box">
+<h3>Schweigepflicht:</h3>
+<p>Psychotherapeuten unterliegen der gesetzlichen, absoluten Schweigepflicht. Es werden keinerlei Auskünfte an Dritte (Verwandte, Institutionen, ... ) weitergegeben.</p>
+</div></div></section>
+<section class="section" id="werdegang">
+<h2>Beruflicher Werdegang:</h2>
+<div class="card focus-box"><div class="cv-list"><div class="cv-item"><div class="cv-year">1978</div><div class="cv-desc">Abschluss des Studiums Psychologie und Pädagogik</div></div><div class="cv-item"><div class="cv-year">1973–1974</div><div class="cv-desc">Erzieherin an der psychiatrischen Kinderbeobachtungsstation der Klinik Innsbruck</div></div><div class="cv-item"><div class="cv-year">1974–1975</div><div class="cv-desc">an der Erziehungsberatungsstelle des Landes Tirol tätig</div></div><div class="cv-item"><div class="cv-year">1978–1986</div><div class="cv-desc">Schulpsychologin in Tirol, Beratungsstellenleiterin</div></div><div class="cv-item"><div class="cv-year">1982–1986</div><div class="cv-desc">Zentrum für Ehe–und Familienfragen, Innsbruck</div></div><div class="cv-item"><div class="cv-year">1985</div><div class="cv-desc">Abschluss der Ausbildung in Klientenzentrierter Gesprächstherapie bei der Österreichischen Gesellschaft für wissenschaftliche, klientenzentrierte Psychotherapie und personenorientierte Gesprächsführung</div></div><div class="cv-item"><div class="cv-year">1980–1981</div><div class="cv-desc">Ausbildung in Familientherapie</div></div><div class="cv-item"><div class="cv-year">1991</div><div class="cv-desc">Eintragung in die Liste der Klinischen–und Gesundheitspsychologen</div></div><div class="cv-item"><div class="cv-year">1992</div><div class="cv-desc">Eintragung in die Psychotherapeutenliste</div></div><div class="cv-item"><div class="cv-year">1993–2014</div><div class="cv-desc">Psychotherapeutin an der Familienberatungsstelle der Caritas, Salzburg</div></div><div class="cv-item"><div class="cv-year">1995</div><div class="cv-desc">an der Psychiatrischen Psychotherapiestation der Christian Doppler Klinik tätig</div></div><div class="cv-item"><div class="cv-year">1999</div><div class="cv-desc">Abschluss der psychoanalytischen Ausbildung im Salzburger Arbeitskreis für Psychoanalyse</div></div><div class="cv-item"><div class="cv-year">seit 1988</div><div class="cv-desc">als Psychologin und Psychotherapeutin, seit 1999 auch als Psychoanalytikerin in freier Praxis tätig</div></div></div></div></section>
+<section class="section" id="kontakt">
+<h2>Kontakt</h2>
+<div class="contact-grid">
+<div class="card contact-block"><h3>Terminvereinbarung:</h3>
+<p>Termine nur nach telefonischer Vereinbarung</p>
+<p>Persönlich erreichen Sie mich am besten Montag bis Freitag zwischen 7.30 und 8.00</p>
+<p>Dr. Christine Stöckl<br/>Bergstraße 22 - 5020 Salzburg<br/>Tel.: 0043 (0)676 42 042 32</p>
+<p>Sie können mir auch eine Nachricht hinterlassen, ich rufe Sie, sobald es mir möglich ist, verlässlich zurück.</p>
+</div>
+<div class="card contact-block address-box"><h3>Praxisadresse:</h3><p>Bergstaße 22<br/>5020 Salzburg</p><iframe allowfullscreen="" height="260" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Bergsta%C3%9Fe%2022,%205020%20Salzburg&amp;output=embed" style="border:0;" title="Google Maps – Praxisadresse" width="100%"></iframe></div>
+</div>
+</section>
+</div>
+</main>
+<footer class="footer"> Dr. Christine Stöckl - Bergstraße 22 - 5020 Salzburg - Tel.: 0043 (0)676 42 042 32 </footer>
+</body>
+</html>
